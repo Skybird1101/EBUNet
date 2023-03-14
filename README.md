@@ -1,2 +1,2 @@
-# ERUNet
-source code of our ERUNet
+# EBUNet
+source code of our EBUNet
