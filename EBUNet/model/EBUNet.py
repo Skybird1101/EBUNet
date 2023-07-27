@@ -275,7 +275,7 @@ class EBUNet(nn.Module):
 
         self.bn_prelu_1 = BNPReLU(32 + 3)
 
-        # DAB Block 1
+        # EBU Block 1
         self.downsample_1 = DownSamplingBlock(32 + 3, 64)
         self.EBU_Block_1 = nn.Sequential()
         for i in range(0, block_1):
@@ -283,7 +283,7 @@ class EBUNet(nn.Module):
         self.bn_prelu_2 = BNPReLU(128 + 3)
         self.ffmb_1 = FFM_B(ch_in=128 + 3, ch_pmca=64)
 
-        # DAB Block 2
+        # EBU Block 2
 
         dilation_block_2 = [2, 2, 4, 4, 6, 6, 8, 8, 16, 16]
 
