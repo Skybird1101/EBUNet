@@ -306,13 +306,13 @@ class EBUNet(nn.Module):
         down_3 = self.down_3(input)
         output0_cat = self.bn_prelu_1(torch.cat([output0, down_1], 1))
 
-        # DAB Block 1
+        # EBU Block 1
         output1_0 = self.downsample_1(output0_cat)
         output1 = self.EBU_Block_1(output1_0)
         temp = output1, output1_0, down_2
         output1_cat = self.ffmb_1(temp)
 
-        # DAB Block 2
+        # EBU Block 2
         output2_0 = self.downsample_2(output1_cat)
         output2 = self.EBU_Block_2(output2_0)
         temp = output2, output2_0, down_3
